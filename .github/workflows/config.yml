@@ -1,0 +1,45 @@
+# name: Node.js Package
+# on:
+#   release:
+#     types: [created]
+# jobs:
+#   build:
+#     runs-on: ubuntu-latest
+#     steps:
+#     - uses: actions/checkout@v2
+#     # Setup .npmrc file to publish to npm
+#     - uses: actions/setup-node@v2
+#       with:
+#         registry-url: 'https://npm.pkg.github.com'
+#     - run: yarn publish
+#       env:
+#         NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+name: Build Project
+on:
+  push:
+    branches: 
+      - main
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+
+    - name: Checkout
+      uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
+
+    - name: Install semantic-release dependencies 
+      run: |
+        npm install
+    
+    - name: Look 
+      run: | 
+        ls -la 
+
+    - name: Run semantic-release 
+      run: |
+        npx semantic-release 
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 

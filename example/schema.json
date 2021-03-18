@@ -1,0 +1,100 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$ref": "#/definitions/Root",
+  "title": "Example schema",
+  "description": "Example schema description",
+  "definitions": {
+    "Root": {
+      "type": "object",
+      "properties": {
+        "toggle": {
+          "type": "boolean",
+          "description": "This is toggle description",
+          "title": "Toggle"
+        },
+        "title": {
+          "type": "string",
+          "description": "Title description"
+        },
+        "description": {
+          "type": "string"
+        },
+        "password": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string",
+          "description": "email",
+          "format": "email"
+        },
+        "url": {
+          "type": "string",
+          "format": "url"
+        },
+        "percentage": {
+          "type": "number"
+        },
+        "select": {
+          "type": "string",
+          "enum": ["Option A", "Option B", "Option C"]
+        },
+        "multiselect": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": ["Option A", "Option B", "Option C"]
+          },
+          "uniqueItems": true
+        },
+        "array": {
+          "type": "array",
+          "title": "Array example",
+          "description": "decsription",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "maxItems": 4
+        },
+        "nested": {
+          "type": "array",
+          "title": "Tasks",
+          "items": {
+            "type": "object",
+            "required": [
+              "title"
+            ],
+            "properties": {
+              "title": {
+                "type": "string",
+                "title": "Title",
+                "description": "A sample title"
+              },
+              "details": {
+                "type": "string",
+                "title": "Task details",
+                "description": "Enter the task details"
+              },
+              "done": {
+                "type": "boolean",
+                "title": "Done?",
+                "default": false
+              }
+            }
+          }
+        }
+      },
+      "required": [
+        "toggle",
+        "title",
+        "description",
+        "password",
+        "percentage",
+        "select",
+        "multiselect",
+        "array"
+      ],
+      "additionalProperties": false
+    }
+  }
+}
