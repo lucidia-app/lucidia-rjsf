@@ -41,10 +41,19 @@ jobs:
     - name: Run semantic-release 
       run: |
         npx semantic-release 
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
 
     - name: Remove npm dependencies 
       run: |
         rm -rf ./node_modules/
 
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
+    # - uses: actions/setup-node@v2
+    #   with:
+    #     registry-url: 'https://npm.pkg.github.com'
+
+    # - run: |
+    #     yarn build 
+    #     yarn publish
+    #   env:
+    #     NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
