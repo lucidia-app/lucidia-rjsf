@@ -14,7 +14,7 @@ const ObjectFieldTemplate = ({
   return (
     <View>
       {
-        (uiSchema[ 'ui:title' ] || title) ? <RootTitleField title={ title } required={ required }/> : null
+        (uiSchema[ 'ui:title' ] || title) ? <RootTitleField required={ required }/> : null
       }
       {
         description ? <DescriptionField description={ description }/> : null

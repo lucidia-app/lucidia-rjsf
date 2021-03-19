@@ -31,7 +31,7 @@ const ArrayFieldTitle = ({ title, required }: ArrayFieldTitleProps) => {
   if (!title) {
     return null;
   }
-  return <TitleField title={ title } required={ required }/>;
+  return <TitleField required={ required }/>;
 };
 
 type ArrayFieldDescriptionProps = {

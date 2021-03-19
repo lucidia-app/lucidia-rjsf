@@ -31,12 +31,9 @@ jobs:
         fetch-depth: 0
 
     - name: Install semantic-release dependencies 
+      uses: actions/setup-node@v2
       run: |
         npm install
-    
-    - name: Look 
-      run: | 
-        ls -la 
 
     - name: Run semantic-release 
       run: |

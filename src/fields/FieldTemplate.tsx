@@ -22,7 +22,7 @@ const FieldTemplate = ({
       style={ styles.container }
     >
       {
-        (displayLabel && label) ? <TitleField title={ label } required={ required } error={ hasErrors }/> : null
+        (displayLabel && label) ? <TitleField required={ required } error={ hasErrors }/> : null
       }
       {
         (displayLabel && rawDescription) ? <DescriptionField description={ rawDescription }/> : null
