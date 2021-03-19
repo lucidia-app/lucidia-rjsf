@@ -34,7 +34,7 @@ jobs:
       uses: actions/setup-node@v2
      
     - run: |
-        cd .semantic-release
+        cd .semantic_release
         npm run installInParent
         cd ../
 
