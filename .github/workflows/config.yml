@@ -32,11 +32,19 @@ jobs:
 
     - name: Install semantic-release dependencies 
       uses: actions/setup-node@v2
-    
-    - run: npm install
+     
+    - run: |
+        cd .semantic-release
+        npm run installInParent
+        cd ../
 
     - name: Run semantic-release 
       run: |
         npx semantic-release 
+
+    - name: Remove npm dependencies 
+      run: |
+        rm -rf ./node_modules/
+
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
