@@ -44,9 +44,9 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
 
-    - name: Remove npm dependencies 
-      run: |
-        rm -rf ./node_modules/
+    # - name: Remove npm dependencies 
+    #   run: |
+    #     rm -rf ./node_modules/
 
     # - uses: actions/setup-node@v2
     #   with:
