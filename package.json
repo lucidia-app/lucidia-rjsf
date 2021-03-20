@@ -4,7 +4,7 @@
     "registry": "https://npm.pkg.github.com/"
   },
   "repository": {
-    "url": "git@github.com:lucidia-app/react-native-jsonschema-form.git"
+    "url": "git@github.com:lucidia-app/lucidia-rjsf.git"
   },
   "version": "1.0.15",
   "main": "dist/index.js",
