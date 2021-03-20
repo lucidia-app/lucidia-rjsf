@@ -1,7 +1,7 @@
 {
   "name": "lucidia",
   "version": "0.0.0",
-  "description": "lucidia monorepo",
+  "description": "lucidia-app rjsf native bare metal",
   "scripts": {
     "installInParent": "npm install && mv ./node_modules ./../node_modules"
   },
