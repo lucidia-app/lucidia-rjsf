@@ -1,6 +1,6 @@
 {
   "name": "lucidia",
-  "version": "0.0.0",
+  "version": "v1.0.0",
   "description": "lucidia monorepo",
   "scripts": {
     "installInParent": "npm install && mv ./node_modules ./../node_modules"
