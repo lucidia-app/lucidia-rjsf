@@ -11,11 +11,6 @@
       {
         "assets": "./CHANGELOG.md"
       }
-    ],
-    [
-      "@semantic-release/exec", {
-        "publishCmd" : "yarn build && yarn publish --tag ${nextRelease.version}"
-      }
     ]
   ],
   "repositoryUrl": "git@github.com:lucidia-app/lucidia-rjsf.git"
