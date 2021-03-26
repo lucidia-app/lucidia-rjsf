@@ -6,7 +6,7 @@
   "repository": {
     "url": "git@github.com:lucidia-app/lucidia-rjsf.git"
   },
-  "version": "1.0.15",
+  "version": "1.0.17",
   "main": "dist/index.js",
   "module": "dist/rjsf-native.esm.js",
   "typings": "dist/index.d.ts",
@@ -24,14 +24,13 @@
     "prepublish": "yarn build"
   },
   "husky": {
-    "hooks": {
-    }
+    "hooks": {}
   },
   "peerDependencies": {
     "@react-native-community/slider": "*",
     "@rjsf/core": "^2.0.0",
     "react": ">=16",
-    "react-native": ">=0.60.0"  
+    "react-native": ">=0.60.0"
   },
   "devDependencies": {
     "@react-native-community/eslint-config": "^2.0.0",
