@@ -6,7 +6,7 @@
   "repository": {
     "url": "git@github.com:lucidia-app/lucidia-rjsf.git"
   },
-  "version": "1.0.17",
+  "version": "1.0.18",
   "main": "dist/index.js",
   "module": "dist/rjsf-native.esm.js",
   "typings": "dist/index.d.ts",
